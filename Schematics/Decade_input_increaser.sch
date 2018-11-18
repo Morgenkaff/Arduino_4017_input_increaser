@@ -1,0 +1,280 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Arduino 4017 input increaser"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 4xxx:4017 U1
+U 1 1 5BF1BAC0
+P 2500 2500
+F 0 "U1" H 2500 2500 50  0000 C CNN
+F 1 "4017" H 2500 2350 50  0000 C CNN
+F 2 "" H 2500 2500 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms.pdf" H 2500 2500 50  0001 C CNN
+	1    2500 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5BF1BF63
+P 4700 2700
+F 0 "A1" H 4700 2700 50  0000 C CNN
+F 1 "Arduino" H 4700 2600 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 4850 1750 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 4700 1700 50  0001 C CNN
+	1    4700 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5BF1C2CF
+P 4600 1400
+F 0 "#PWR01" H 4600 1250 50  0001 C CNN
+F 1 "+5V" H 4615 1573 50  0000 C CNN
+F 2 "" H 4600 1400 50  0001 C CNN
+F 3 "" H 4600 1400 50  0001 C CNN
+	1    4600 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 1700 2500 1600
+Wire Wire Line
+	2500 1600 4600 1600
+Wire Wire Line
+	4600 1600 4600 1400
+Wire Wire Line
+	4600 1600 4600 1700
+Connection ~ 4600 1600
+Wire Wire Line
+	4800 3700 4800 3800
+Wire Wire Line
+	4800 3800 4700 3800
+Wire Wire Line
+	4700 3800 4700 3700
+Wire Wire Line
+	4700 3800 3750 3800
+Wire Wire Line
+	2500 3800 2500 3400
+Connection ~ 4700 3800
+$Comp
+L power:GNDREF #PWR02
+U 1 1 5BF1C524
+P 4700 3900
+F 0 "#PWR02" H 4700 3650 50  0001 C CNN
+F 1 "GNDREF" H 4705 3727 50  0000 C CNN
+F 2 "" H 4700 3900 50  0001 C CNN
+F 3 "" H 4700 3900 50  0001 C CNN
+	1    4700 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3800 4700 3900
+$Comp
+L Device:D D1
+U 1 1 5BF1C5CB
+P 3450 2000
+F 0 "D1" H 3450 1784 50  0001 C CNN
+F 1 "D" H 3450 1875 50  0001 C CNN
+F 2 "" H 3450 2000 50  0001 C CNN
+F 3 "~" H 3450 2000 50  0001 C CNN
+	1    3450 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 5BF1C6BD
+P 3450 2100
+F 0 "D2" H 3450 1884 50  0001 C CNN
+F 1 "D" H 3450 1975 50  0001 C CNN
+F 2 "" H 3450 2100 50  0001 C CNN
+F 3 "~" H 3450 2100 50  0001 C CNN
+	1    3450 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D D3
+U 1 1 5BF1C6D5
+P 3450 2200
+F 0 "D3" H 3450 1984 50  0001 C CNN
+F 1 "D" H 3450 2075 50  0001 C CNN
+F 2 "" H 3450 2200 50  0001 C CNN
+F 3 "~" H 3450 2200 50  0001 C CNN
+	1    3450 2200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3000 2000 3300 2000
+Wire Wire Line
+	3300 2100 3000 2100
+Wire Wire Line
+	3000 2200 3300 2200
+Wire Wire Line
+	3600 2000 3750 2000
+Wire Wire Line
+	3750 2000 3750 2100
+Wire Wire Line
+	3750 2200 3600 2200
+Wire Wire Line
+	3600 2100 3750 2100
+Connection ~ 3750 2100
+Wire Wire Line
+	3750 2100 3750 2200
+Wire Wire Line
+	2000 2000 1950 2000
+Wire Wire Line
+	1950 2000 1950 1400
+Wire Wire Line
+	1950 1400 4000 1400
+Wire Wire Line
+	4000 1400 4000 2400
+Wire Wire Line
+	4000 2400 4200 2400
+Wire Wire Line
+	4200 2500 3750 2500
+Wire Wire Line
+	3750 2500 3750 2200
+Connection ~ 3750 2200
+Wire Wire Line
+	3000 2300 3100 2300
+Wire Wire Line
+	3100 2300 3100 3950
+Wire Wire Line
+	3100 3950 1950 3950
+Wire Wire Line
+	1950 3950 1950 2300
+Wire Wire Line
+	1950 2300 2000 2300
+Wire Wire Line
+	2000 2100 1850 2100
+Wire Wire Line
+	1850 2100 1850 3800
+Wire Wire Line
+	1850 3800 2500 3800
+Connection ~ 2500 3800
+$Comp
+L Device:LED D4
+U 1 1 5BF1E075
+P 5600 2700
+F 0 "D4" H 5592 2445 50  0001 C CNN
+F 1 "LED" H 5592 2536 50  0001 C CNN
+F 2 "" H 5600 2700 50  0001 C CNN
+F 3 "~" H 5600 2700 50  0001 C CNN
+	1    5600 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5BF1E0F3
+P 5600 2850
+F 0 "D5" H 5592 2595 50  0001 C CNN
+F 1 "LED" H 5592 2686 50  0001 C CNN
+F 2 "" H 5600 2850 50  0001 C CNN
+F 3 "~" H 5600 2850 50  0001 C CNN
+	1    5600 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 5BF1E121
+P 5600 3000
+F 0 "D6" H 5592 2745 50  0001 C CNN
+F 1 "LED" H 5592 2836 50  0001 C CNN
+F 2 "" H 5600 3000 50  0001 C CNN
+F 3 "~" H 5600 3000 50  0001 C CNN
+	1    5600 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5BF1E274
+P 3750 3250
+F 0 "R1" H 3820 3296 50  0000 L CNN
+F 1 "10k" H 3820 3205 50  0000 L CNN
+F 2 "" V 3680 3250 50  0001 C CNN
+F 3 "~" H 3750 3250 50  0001 C CNN
+	1    3750 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BF1E3BC
+P 5900 3250
+F 0 "R2" H 5970 3296 50  0000 L CNN
+F 1 "1k5" H 5970 3205 50  0000 L CNN
+F 2 "" V 5830 3250 50  0001 C CNN
+F 3 "~" H 5900 3250 50  0001 C CNN
+	1    5900 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 2700 5450 2700
+Wire Wire Line
+	5450 2850 5400 2850
+Wire Wire Line
+	5400 2850 5400 2800
+Wire Wire Line
+	5400 2800 5200 2800
+Wire Wire Line
+	5200 2900 5300 2900
+Wire Wire Line
+	5300 2900 5300 3000
+Wire Wire Line
+	5300 3000 5450 3000
+Wire Wire Line
+	5750 2700 5900 2700
+Wire Wire Line
+	5900 2700 5900 2850
+Wire Wire Line
+	5750 3000 5900 3000
+Connection ~ 5900 3000
+Wire Wire Line
+	5900 3000 5900 3100
+Wire Wire Line
+	5900 2850 5750 2850
+Connection ~ 5900 2850
+Wire Wire Line
+	5900 2850 5900 3000
+Wire Wire Line
+	5900 3400 5900 3800
+Wire Wire Line
+	5900 3800 4800 3800
+Connection ~ 4800 3800
+Wire Wire Line
+	3750 2500 3750 3100
+Connection ~ 3750 2500
+Wire Wire Line
+	3750 3400 3750 3800
+Connection ~ 3750 3800
+Wire Wire Line
+	3750 3800 2500 3800
+Text Notes 3250 2450 0    50   ~ 0
+I have used\n1N4148
+Text Notes 5350 2550 0    50   ~ 0
+Plain red LEDs
+Wire Notes Line
+	3200 1900 3850 1900
+Wire Notes Line
+	3850 1900 3850 2450
+Wire Notes Line
+	3850 2450 3200 2450
+Wire Notes Line
+	3200 2450 3200 1900
+Wire Notes Line
+	5250 2450 5250 3100
+Wire Notes Line
+	5250 3100 6000 3100
+Wire Notes Line
+	6000 3100 6000 2450
+Wire Notes Line
+	6000 2450 5250 2450
+$EndSCHEMATC

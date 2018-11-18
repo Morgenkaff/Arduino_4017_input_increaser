@@ -12,9 +12,9 @@ int decReturnPin = 4; // The returning signal
 
 int decCounter = 0; // Used to control the amount of switches to traverse
 
-bool input1 = false; // Placeholders for
-bool input2 = false; // the state of
-bool input3 = false; // the switches
+bool input1 = true; // Placeholders for
+bool input2 = true; // the state of
+bool input3 = true; // the switches
 
 ThreadController controller = ThreadController();
 
